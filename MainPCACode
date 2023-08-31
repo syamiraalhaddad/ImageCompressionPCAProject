@@ -1,0 +1,26 @@
+r, g, b= cv2.split(img)
+r, g, b = r / 255, g / 255, b / 255
+
+pca_components = 50
+pca_r =PCA(n_components=pca_components)
+reduced_r= pca_r.fit_transform(r)
+reduced r. shape
+
+pca_g =PCA(n_components=pca_components)
+reduced_g = pca_g.fit_transform(r)
+reduced_g.shape
+
+pca_b = PCA(n_components=pca_components)
+reduced_b = pca_b.fit_transform(r)
+reduced_b. shape
+
+combined = np.array([reduced_r, reduced_g, reduced_b])
+combined. shape
+
+reconstructed_r =pca_r.inverse_transform(reduced_r)
+reconstructed_g= pca_g.inverse_transform( reduced_r)
+reconstructed_b= pca_b.inverse_transform(reduced_r)
+
+img_reconstrructed = (cv2.merge( (reconstructed_r, r reconstructed g, reconstructed b)))
+plt.imshow(img_reconstructed)
+img_reconstructed.shape

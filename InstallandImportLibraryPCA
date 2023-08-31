@@ -1,0 +1,6 @@
+pip install scikit-learn matplotlib opencv-python numpy
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
